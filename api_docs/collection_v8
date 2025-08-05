@@ -1,0 +1,2949 @@
+{
+	"info": {
+		"_postman_id": "aed771bb-6125-4a40-845a-7901ae550987",
+		"name": "Legacy APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4945737"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Addresses APIs",
+					"item": [
+						{
+							"name": "Get Ping Addresses API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/addresses/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Addresses API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/addresses?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Addresses by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/addresses/4",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Addresses API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fkID\": 1,\r\n    \"firstname\": \"Charliemagne\",\r\n    \"lastname\": \"Malicay\",\r\n    \"email\": \"charliemalicay@gmail.com\",\r\n    \"phoneNumber\": \"123456\",\r\n    \"mobileNumber\": \"+639994924896\",\r\n    \"positionTitle\": \"Fullstack Developer\",\r\n    \"contactType\": \"OTHER\",\r\n    \"table\": \"Customers\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/addresses",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE Delete Addresses API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/addresses/1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Addresses API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phoneNumber\": \"987654321\",\r\n    \"contactType\": \"PRIMARY\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/addresses/1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth APIs",
+					"item": [
+						{
+							"name": "POST Login API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"pcadev@entvas.com\",\r\n    \"password\": \"Test123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contacts APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Contacts API",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{temoAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/contacts/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Contacts API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/contacts?page=2",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Contacts by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/contacts/17",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"17"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Contacts by Customer ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/contacts/customers?id=1&page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"customers"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Contacts API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fkID\": 1,\r\n    \"firstname\": \"Charliemagne\",\r\n    \"lastname\": \"Malicay\",\r\n    \"email\": \"charliemalicay@gmail.com\",\r\n    \"phoneNumber\": \"123456\",\r\n    \"mobileNumber\": \"+639994924896\",\r\n    \"positionTitle\": \"Fullstack Developer\",\r\n    \"contactType\": \"OTHER\",\r\n    \"table\": \"Customers\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/contacts",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Contacts API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/contacts/18",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"18"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Contacts API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phoneNumber\": \"987654321\",\r\n    \"contactType\": \"PRIMARY\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/contacts/17",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"17"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Customers APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Customers API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/customers/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Customers API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/customers?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Customers w/ Contacts API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/customers/with-contacts?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"with-contacts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Search Customers API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/customers/search?q=A%20Cloud%20Guru&upage=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "A%20Cloud%20Guru"
+										},
+										{
+											"key": "upage",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Customers by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/v1/customers/193",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"193"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Customers API",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"organizationID\": 1,\r\n    \"name\": \"Charlie AI Company\",\r\n    \"ownerName\": \"Charlie\",\r\n    \"email\": \"charlie@aicorp.com\",\r\n    \"phoneNumber\": \"\",\r\n    \"mobileNumber\": \"+639994924896\",\r\n    \"websiteURL\": \"\",\r\n    \"billingAddress\": \"\",\r\n    \"shippingAddress\": \"\",\r\n    \"city\": \"\",\r\n    \"state\": \"\",\r\n    \"postalCode\": \"\",\r\n    \"country\": \"\",\r\n    \"industry\": \"AI Techs\",\r\n    \"customerType\": \"CLIENT\",\r\n    \"status\": \"ACTIVE\",\r\n    \"source\": \"\",\r\n    \"convertedAt\": \"\",\r\n    \"notes\": \"\",\r\n    \"vatNumber\": \"\",\r\n    \"taxID\": \"\",\r\n    \"tags\": \"\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/customers",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Customers API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/customers/194",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"194"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Customers API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Charlie AI Company Updated\",\r\n    \"ownerName\": \"Charlie 2\",\r\n    \"phoneNumber\": \"1234567\",\r\n    \"websiteURL\": \"www.charlie-ai-techs.com\",\r\n    \"city\": \"Davao City\",\r\n    \"state\": \"Davao Del Sur\",\r\n    \"postalCode\": \"8000\",\r\n    \"country\": \"Philippines\",\r\n    \"industry\": \"AI Techs 2\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/customers/202",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"202"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Orders APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Orders API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/orders",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Orders API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/orders/all?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"orders",
+										"all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order Items APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Order Items API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/order-items/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order-items",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Order Items API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/order-items?page=2",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order-items"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Order Items by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/order-items/1612",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order-items",
+										"1612"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Order Items API",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderID\": 1,\r\n    \"productID\": 1,\r\n    \"itemName\": \"Sock - Custom\",\r\n    \"itemDescription\": \"Customizing Socks\",\r\n    \"quantity\": 10,\r\n    \"unitPrice\": 20,\r\n    \"taxRate\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/order-items",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Customers Addresses API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/order-items/1611",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order-items",
+										"1611"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Products API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"itemName\": \"Sock - Custom Ultimate\",\r\n    \"quantity\": 20,\r\n    \"unitPrice\": 25,\r\n    \"taxRate\": 0.5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/order-items/1612",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"order-items",
+										"1612"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Products API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/products/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Products API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/products?page=7",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Products by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/products/1021",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"1021"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Products by Category ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/products/category?id=3&page=4",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"category"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										},
+										{
+											"key": "page",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Products API",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"organizationID\": 1,\r\n    \"productCategoryID\": 1,\r\n    \"inventory\": 10,\r\n    \"supplierPhone\": \"13456678\",\r\n    \"supplierName\": \"\",\r\n    \"supplierEmail\": \"\",\r\n    \"supplierContactName\": \"\",\r\n    \"supplierAddress\": \"\",\r\n    \"style\": \"\",\r\n    \"productName\": \"Ultimate Socks\",\r\n    \"status\": \"ACTIVE\",\r\n    \"productPrice\": 10,\r\n    \"imageURL\": \"\",\r\n    \"sku\": \"JHGJ954806\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/products",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Customers Addresses API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/products/1020",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"1020"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Products API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\": \"Ultimate Socks V2\",\r\n    \"productPrice\": 20,\r\n    \"imageURL\": \"https://i.stpost.com/woolrich-ultimate-outdoor-socks-2-pack-merino-wool-crew-for-men-in-charcoal-denim~p~90yxk_01~1500.2.jpg\",\r\n    \"sku\": \"JHGJ954806UP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/products/1021",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"1021"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products Category APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Products Category API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/products-category/ping",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"products-category",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Products Category API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/products-category?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"products-category"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Production Category by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/products-category/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"products-category",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Production Category API",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"socks\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/products-category",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"products-category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Organizations API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/products-category/1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"products-category",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Organizations API Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"Socks V2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/products-category/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"products-category",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Organizations APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Organizations API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/organizations/ping",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"organizations",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Organizations API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/organizations?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"organizations"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Organizations by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/organizations/4",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"organizations",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Organizations API",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Charlie AI Organization\",\r\n    \"industry\": \"AI Technology\",\r\n    \"websiteURL\": \"charlie.com\",\r\n    \"email\": \"charliemalicay@gmail.com\",\r\n    \"phoneNumber\": \"12345\",\r\n    \"billingAddress\": \"Davao City\",\r\n    \"shippingAddress\": \"Davao City\",\r\n    \"city\": \"Davao City\",\r\n    \"state\": \"Davao Del Sur\",\r\n    \"postalCode\": \"8000\",\r\n    \"country\": \"Philippines\",\r\n    \"notes\": \"Adding Organization Data\",\r\n    \"tags\": \"[]\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/organizations",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"organizations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Organizations API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/organizations/3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"organizations",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Organizations API Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Charlie AI Organization 2\",\r\n    \"notes\": \"Updating Organization Data\",\r\n    \"tags\": \"[{tag_1: \\\"AI Tech\\\"}]\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/v1/organizations/4",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"organizations",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Quotes APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Quotes API",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{temoAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Quotes API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Quotes by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes/2",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Quotes API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fkCustomerID\": 1,\r\n    \"quoteDate\": \"2025-05-13\",\r\n    \"expirationDate\": \"2025-11-13\",\r\n    \"status\": \"DRAFT\",\r\n    \"subtotal\": 100,\r\n    \"taxTotal\": 10,\r\n    \"currency\": \"USD\",\r\n    \"notes\": \"\",\r\n    \"terms\": \"\",\r\n    \"tags\": \"\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Quotes API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes/1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Quotes API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n    \"expirationDate\": \"2025-12-13\",\r\n    \"status\": \"SENT\",\r\n    \"notes\": \"notes 1\",\r\n    \"terms\": \"terms\",\r\n    \"tags\": \"[\\\"tag1\\\", \\\"tag2\\\"]\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes/2",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Quotes Items APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Quotes Items API",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{temoAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes-items/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes-items",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Quotes Items API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes-items?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes-items"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Quotes Items by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes-items/2",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes-items",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Quote Items API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fkQuoteID\": 2,\r\n    \"fkProductID\": 2,\r\n    \"itemName\": \"Order Item\",\r\n    \"itemDescription\": \"Order Description\",\r\n    \"quantity\": 20,\r\n    \"unitPrice\": 50,\r\n    \"taxRate\": 0.5\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes-items",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Quotes Items API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes-items/1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes-items",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Quotes Items API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"itemName\": \"Order Item 2\",\r\n    \"itemDescription\": \"Order Description 2\",\r\n    \"unitPrice\": 100,\r\n    \"taxRate\": 0.7\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes-items/2",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes-items",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Packaging API V1",
+					"item": [
+						{
+							"name": "GET Ping Packaging API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/packaging/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"packaging",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Packaging API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/packaging?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"packaging"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Packaging Detail by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/packaging/1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"packaging",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trims API V1",
+					"item": [
+						{
+							"name": "GET Ping Trims API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/trims/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"trims",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Trims API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/trims?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"trims"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Trims Detail by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/trims/1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"trims",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Yarns API V1",
+					"item": [
+						{
+							"name": "GET Ping Yarns API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/yarns/ping",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"yarns",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Yarns API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/yarns?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"yarns"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Yarns Detail by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/yarns/1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"yarns",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Staging",
+			"item": [
+				{
+					"name": "Addresses APIs",
+					"item": [
+						{
+							"name": "Get Ping Addresses API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/addresses/ping",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Addresses API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/addresses?page=1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Addresses by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/addresses/5",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Addresses API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fkID\": 1,\r\n    \"firstname\": \"Charliemagne\",\r\n    \"lastname\": \"Malicay\",\r\n    \"email\": \"charliemalicay@gmail.com\",\r\n    \"phoneNumber\": \"123456\",\r\n    \"mobileNumber\": \"+639994924896\",\r\n    \"positionTitle\": \"Fullstack Developer\",\r\n    \"contactType\": \"OTHER\",\r\n    \"table\": \"Customers\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{staging}}/api/v1/addresses",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE Delete Addresses API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/addresses/4",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Addresses API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phoneNumber\": \"987654321\",\r\n    \"contactType\": \"PRIMARY\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/addresses/5",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"addresses",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contacts APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Contacts API",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{temoAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/contacts/ping",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Contacts API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/contacts?page=2",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Contacts by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/contacts/1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Contacts by Customer ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/contacts/customers?id=1&page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"customers"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Contacts API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fkID\": 1,\r\n    \"firstname\": \"Charliemagne\",\r\n    \"lastname\": \"Malicay\",\r\n    \"email\": \"charliemalicay@gmail.com\",\r\n    \"phoneNumber\": \"123456\",\r\n    \"mobileNumber\": \"+639994924896\",\r\n    \"positionTitle\": \"Fullstack Developer\",\r\n    \"contactType\": \"OTHER\",\r\n    \"table\": \"Customers\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{staging}}/api/v1/contacts",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Contacts API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/contacts/2054",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"contacts",
+										"2054"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Contacts API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstname\": \"Charliemagne 123\",\r\n    \"lastname\": \"Malicay\",\r\n    \"email\": \"charliemalicay@gmail.com\",\r\n    \"phoneNumber\": \"1234567\",\r\n    \"mobileNumber\": \"+639994924896\",\r\n    \"positionTitle\": \"Any Position\",\r\n    \"contactType\": \"ADMIN\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{staging}}/api/v1/contacts/2055",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"2055"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Customers APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Customers API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/customers/ping",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Customers API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/customers?page=20",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Customers by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/customers/1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Search Customers API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/customers/search?q=Kat&upage=1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "Kat"
+										},
+										{
+											"key": "upage",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Customers w/ Contacts API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/customers/with-contacts?page=1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"with-contacts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Customers API",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"organizationID\": 1,\r\n    \"name\": \"Charlie AI Company\",\r\n    \"email\": \"charlie@aicorp.com\",\r\n    \"phoneNumber\": \"\",\r\n    \"mobileNumber\": \"+639994924896\",\r\n    \"websiteURL\": \"\",\r\n    \"billingAddress\": \"\",\r\n    \"shippingAddress\": \"\",\r\n    \"city\": \"\",\r\n    \"state\": \"\",\r\n    \"postalCode\": \"\",\r\n    \"country\": \"\",\r\n    \"industry\": \"AI Techs\",\r\n    \"customerType\": \"CLIENT\",\r\n    \"status\": \"ACTIVE\",\r\n    \"source\": \"\",\r\n    \"convertedAt\": \"\",\r\n    \"notes\": \"\",\r\n    \"vatNumber\": \"\",\r\n    \"taxID\": \"\",\r\n    \"tags\": \"\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{staging}}/api/v1/customers",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Customers API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/customers/2463",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"customers",
+										"2463"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Customers API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Charlie AI Company Updated\",\r\n    \"phoneNumber\": \"1234567\",\r\n    \"websiteURL\": \"www.charlie-ai-techs.com\",\r\n    \"city\": \"Davao City\",\r\n    \"state\": \"Davao Del Sur\",\r\n    \"postalCode\": \"8000\",\r\n    \"country\": \"Philippines\",\r\n    \"industry\": \"AI Techs 2\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{staging}}/api/v1/customers/193",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"193"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Packaging API V1",
+					"item": [
+						{
+							"name": "GET Ping Packaging API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/packaging/ping",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"packaging",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Packaging API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/packaging?page=1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"packaging"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Packaging Detail by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/packaging/1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"packaging",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Products API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/products/ping",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Products API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/products?page=1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Products by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/products/1018",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"1018"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Products by Category ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/products/category?id=3&page=4",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"category"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										},
+										{
+											"key": "page",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Products API",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"organizationID\": 1,\r\n    \"productCategoryID\": 1,\r\n    \"inventory\": 10,\r\n    \"supplierPhone\": \"13456678\",\r\n    \"supplierName\": \"\",\r\n    \"supplierEmail\": \"\",\r\n    \"supplierContactName\": \"\",\r\n    \"supplierAddress\": \"\",\r\n    \"style\": \"\",\r\n    \"productName\": \"Ultimate Socks\",\r\n    \"status\": \"ACTIVE\",\r\n    \"productPrice\": 10,\r\n    \"imageURL\": \"\",\r\n    \"sku\": \"JHGJ954806\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{staging}}/api/v1/products",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Customers Addresses API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/v1/products/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Products API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\": \"Ultimate Socks V2\",\r\n    \"productPrice\": 20,\r\n    \"imageURL\": \"https://i.stpost.com/woolrich-ultimate-outdoor-socks-2-pack-merino-wool-crew-for-men-in-charcoal-denim~p~90yxk_01~1500.2.jpg\",\r\n    \"sku\": \"JHGJ954806UP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{staging}}/api/v1/products/1021",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"1021"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Quotes APIs V1",
+					"item": [
+						{
+							"name": "GET Ping Quotes API",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{temoAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/quotes/ping",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Quotes API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/quotes?page=1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Quotes by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/quotes/4",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Create Quotes API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fkCustomerID\": 1,\r\n    \"quoteDate\": \"2025-05-13\",\r\n    \"expirationDate\": \"2025-11-13\",\r\n    \"status\": \"DRAFT\",\r\n    \"subtotal\": 100,\r\n    \"taxTotal\": 10,\r\n    \"currency\": \"USD\",\r\n    \"notes\": \"\",\r\n    \"terms\": \"\",\r\n    \"tags\": \"\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{staging}}/api/v1/quotes",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DEL Delete Quotes API",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes/3",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Update Quotes API",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n    \"expirationDate\": \"2025-12-13\",\r\n    \"status\": \"SENT\",\r\n    \"notes\": \"notes 1\",\r\n    \"terms\": \"terms\",\r\n    \"tags\": \"[\\\"tag1\\\", \\\"tag2\\\"]\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhot}}/api/v1/quotes/4",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"quotes",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trims API V1",
+					"item": [
+						{
+							"name": "GET Ping Trims API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/trims/ping",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"trims",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Trims API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/trims?page=1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"trims"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Trims Detail by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/trims/1",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"trims",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Yarns API V1",
+					"item": [
+						{
+							"name": "GET Ping Yarns API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{staging}}/api/v1/yarns/ping",
+									"host": [
+										"{{staging}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"yarns",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET All Yarns API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/yarns?page=1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"yarns"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Yarns Detail by ID API",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhot}}/api/v1/yarns/1",
+									"host": [
+										"{{localhot}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"yarns",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

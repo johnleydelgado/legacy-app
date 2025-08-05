@@ -1,0 +1,14 @@
+export enum FKItemType {
+  QUOTES = 'QUOTES',
+  ORDERS = 'ORDERS',
+  INVOICES = 'INVOICES',
+  PURCHASE_ORDERS = 'PURCHASE_ORDERS',
+  PRODUCTION = 'PRODUCTION',
+  SHIPPING = 'SHIPPING',
+}
+
+export enum Type {
+  LOGO = 'LOGO',
+  ARTWORK = 'ARTWORK',
+  OTHER = 'OTHER',
+}

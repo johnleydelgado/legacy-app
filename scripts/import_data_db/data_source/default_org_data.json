@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Legacy PCA",
+    "industry": "Legacy PCA",
+    "website_url": "http://organization.site.com",
+    "email": "charliemalicay@gmail.com",
+    "phone_number": "+1234-5678-9123",
+    "billing_address": "Davao City, PH",
+    "shipping_address": "Davao City, PH",
+    "city": "Davao City",
+    "state": "Davao Del Sur",
+    "postal_code": "8000",
+    "country": "Philippines",
+    "notes": "Organization Notes Here",
+    "tags": "[\"Organization Tag 1\", \"Organization Tag 2\", \"Organization Tag 3\"]"
+  },
+  {
+    "name": "Legacy Clockify",
+    "industry": "Legacy Clockify",
+    "website_url": "http://organization.site.com",
+    "email": "charliemalicay@gmail.com",
+    "phone_number": "+1234-5678-9123",
+    "billing_address": "Davao City, PH",
+    "shipping_address": "Davao City, PH",
+    "city": "Davao City",
+    "state": "Davao Del Sur",
+    "postal_code": "8000",
+    "country": "Philippines",
+    "notes": "Organization Notes Here",
+    "tags": "[\"Organization Tag 1\", \"Organization Tag 2\", \"Organization Tag 3\"]"
+  }
+]
